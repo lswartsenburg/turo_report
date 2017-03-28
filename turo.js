@@ -16,7 +16,7 @@ jQuery(".js-tripDetails[data-reservation-id]").each(function(i,e){
       var renter = data['renter']['name'];
 
       bookings.push({
-		renter: renter,
+        renter: renter,
         start: start,
         end: end,
         cost: cost,
@@ -27,9 +27,9 @@ jQuery(".js-tripDetails[data-reservation-id]").each(function(i,e){
 });
 
 $.when.apply($, allPromises).then(function() {
-     allDone(bookings);
+  allDone(bookings);
 }, function(e) {
-     console.log("My Ajax failed");
+  console.log("My Ajax failed");
 });
 
 
